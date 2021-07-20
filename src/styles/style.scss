@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-size: 16px;
+    $margin--container: 1.2%;
+    $color-primaire: #9356DC;
+    $color-secondaire: #FF79DA;
+    $color-tertiaire: #99E2D0;
+}
+
+.container {
+    margin: 0 var(--margin--container);
+}
+nav {
+    background-color: red;
+    height: 20vh;
+    width: 50%;
+}
