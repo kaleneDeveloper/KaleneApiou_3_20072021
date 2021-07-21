@@ -1,19 +1,236 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: 0;
     font-size: 16px;
-    $margin--container: 1.2%;
-    $color-primaire: #9356DC;
-    $color-secondaire: #FF79DA;
-    $color-tertiaire: #99E2D0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    --font-family-Shrikhand: "Shrikhand", sans-serif;
+    --margin--container: 1.5%;
+    --color-primaire: #9356dc;
+    --color-secondaire: #ff79da;
+    --color-tertiaire: #99e2d0;
+    --color-gray: gray;
+    --color-bg-gray-darkness: #6d6d6d;
+    --color-bg-gray: #eaeaea;
+    --color-bg-light: #f6f6f6;
+    --color-bg-light-pink: #f5edff;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+p {
+    font-weight: 400;
+    color: rgb(66, 66, 66);
+}
+.bg-gray {
+    background-color: var(--color-bg-gray);
+}
+.bg-gray-drakness {
+    background-color: var(--color-bg-gray-darkness);
+}
+.bg-light {
+    background-color: var(--color-bg-light);
+}
+.bg-light-pink {
+    background-color: var(--color-bg-light-pink);
+}
+.logo {
+    font-family: var(--font-family-Shrikhand);
 }
 
-.container {
-    margin: 0 var(--margin--container);
+// header
+
+.nav {
+    position: relative;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-family: var(--font-family-Shrikhand);
+    }
 }
-nav {
-    background-color: red;
-    height: 20vh;
-    width: 50%;
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.container--block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1rem;
+
+    .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            margin-right: 1rem;
+        }
+        p {
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+    .exploreRestaurant {
+        h2 {
+            font-size: 1.5rem;
+        }
+        button {
+            margin: 1rem;
+            margin-bottom: 2rem;
+            padding: 1em;
+            border-radius: 30px;
+            color: white;
+            background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            &:hover {
+                opacity: 0.8;
+                background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+ 
+    .fonctionality {
+        h2 {
+            font-size: 1.5rem;
+            text-align: start;
+        }
+     
+        .fonctionality--block {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            border-radius: 20px;
+            margin-left: 10px;
+            &:hover {
+                background-color: var(--color-bg-light-pink);
+                & a .fonctionality--block--description i {
+                    color: var(--color-primaire);
+                }
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            .fonctionality--block--icon {
+                background-color: var(--color-primaire);
+                border-radius: 30px;
+                width: 20px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                margin-left: -10px;
+                span {
+                    color: white;
+                    font-size: 0.75rem;
+                }
+            }
+            .fonctionality--block--description {
+                display: flex;
+                align-items: center;
+                padding: 1rem 0rem;
+            }
+            .fonctionality--block--description i {
+                margin: 0 2rem;
+                font-size: 1.2rem;
+                color: var(--color-bg-gray-darkness);
+            }
+         
+        }
+        .fonctionality--block--active {
+            background-color: var(--color-bg-light-pink);
+            .fonctionality--block--description i {
+                color: var(--color-primaire);
+            }
+        }
+    }
+    .list-dishes {
+        margin: 2rem 0;
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: var(--color-primaire);
+            }
+            & p:hover {
+                color: var(--color-primaire);
+            }
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            text-align: start;
+        }
+        .list-dishes--block {
+            background-color: white;
+            margin: 1rem 0;
+            border-radius: 15px;
+
+            .image {
+                height: 200px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+            .description {
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                div:nth-child(1) {
+                    text-align: start;
+                    h3 {
+                        margin-bottom: -0.5rem;
+                        cursor: pointer;
+                    }
+                    p {
+                        cursor: pointer;
+                    }
+                }
+                div:nth-child(2) {
+                    i {
+                        position: relative;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 100;
+                        cursor: pointer;
+                        font-size: 1.5rem;
+                        color: var(--color-bg-gray-darkness);
+                    }
+                    i:hover,
+                    i:focus {
+                        background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    height: 100px;
 }

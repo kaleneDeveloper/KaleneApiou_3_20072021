@@ -1,18 +1,313 @@
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: 0;
           box-sizing: 0;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  --font-family-Shrikhand: "Shrikhand", sans-serif;
+  --margin--container: 1.5%;
+  --color-primaire: #9356dc;
+  --color-secondaire: #ff79da;
+  --color-tertiaire: #99e2d0;
+  --color-gray: gray;
+  --color-bg-gray-darkness: #6d6d6d;
+  --color-bg-gray: #eaeaea;
+  --color-bg-light: #f6f6f6;
+  --color-bg-light-pink: #f5edff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  color: #424242;
+}
+
+.bg-gray {
+  background-color: var(--color-bg-gray);
+}
+
+.bg-gray-drakness {
+  background-color: var(--color-bg-gray-darkness);
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-light-pink {
+  background-color: var(--color-bg-light-pink);
+}
+
+.logo {
+  font-family: var(--font-family-Shrikhand);
+}
+
+.nav {
+  position: relative;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: var(--font-family-Shrikhand);
 }
 
 .container {
-  margin: 0 var(--margin--container);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
-nav {
-  background-color: red;
-  height: 20vh;
-  width: 50%;
+.container--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.container--block .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container--block .location i {
+  margin-right: 1rem;
+}
+
+.container--block .location p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.container--block .exploreRestaurant h2 {
+  font-size: 1.5rem;
+}
+
+.container--block .exploreRestaurant button {
+  margin: 1rem;
+  margin-bottom: 2rem;
+  padding: 1em;
+  border-radius: 30px;
+  color: white;
+  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container--block .exploreRestaurant button:hover {
+  opacity: 0.8;
+  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container--block .fonctionality h2 {
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.container--block .fonctionality .fonctionality--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.container--block .fonctionality .fonctionality--block:hover {
+  background-color: var(--color-bg-light-pink);
+}
+
+.container--block .fonctionality .fonctionality--block:hover a .fonctionality--block--description i {
+  color: var(--color-primaire);
+}
+
+.container--block .fonctionality .fonctionality--block a {
+  text-decoration: none;
+  color: black;
+}
+
+.container--block .fonctionality .fonctionality--block .fonctionality--block--icon {
+  background-color: var(--color-primaire);
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  margin-left: -10px;
+}
+
+.container--block .fonctionality .fonctionality--block .fonctionality--block--icon span {
+  color: white;
+  font-size: 0.75rem;
+}
+
+.container--block .fonctionality .fonctionality--block .fonctionality--block--description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0rem;
+}
+
+.container--block .fonctionality .fonctionality--block .fonctionality--block--description i {
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  color: var(--color-bg-gray-darkness);
+}
+
+.container--block .fonctionality .fonctionality--block--active {
+  background-color: var(--color-bg-light-pink);
+}
+
+.container--block .fonctionality .fonctionality--block--active .fonctionality--block--description i {
+  color: var(--color-primaire);
+}
+
+.container--block .list-dishes {
+  margin: 2rem 0;
+}
+
+.container--block .list-dishes a {
+  text-decoration: none;
+  color: black;
+}
+
+.container--block .list-dishes a:hover {
+  color: var(--color-primaire);
+}
+
+.container--block .list-dishes a p:hover {
+  color: var(--color-primaire);
+}
+
+.container--block .list-dishes h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.container--block .list-dishes .list-dishes--block {
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 15px;
+}
+
+.container--block .list-dishes .list-dishes--block .image {
+  height: 200px;
+}
+
+.container--block .list-dishes .list-dishes--block .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.container--block .list-dishes .list-dishes--block .description {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container--block .list-dishes .list-dishes--block .description div:nth-child(1) {
+  text-align: start;
+}
+
+.container--block .list-dishes .list-dishes--block .description div:nth-child(1) h3 {
+  margin-bottom: -0.5rem;
+  cursor: pointer;
+}
+
+.container--block .list-dishes .list-dishes--block .description div:nth-child(1) p {
+  cursor: pointer;
+}
+
+.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 100;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-bg-gray-darkness);
+}
+
+.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i:hover,
+.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i:focus {
+  background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+footer {
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
