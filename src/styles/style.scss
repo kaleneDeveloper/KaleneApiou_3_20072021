@@ -120,7 +120,7 @@ p {
             margin-left: 10px;
             &:hover {
                 background-color: var(--color-bg-light-pink);
-                & a .fonctionality--block--description i {
+                & a i {
                     color: var(--color-primaire);
                 }
             }
@@ -147,6 +147,9 @@ p {
                 display: flex;
                 align-items: center;
                 padding: 1rem 0rem;
+                h2 {
+                    font-size: 1rem;
+                }
             }
             .fonctionality--block--description i {
                 margin: 0 2rem;
@@ -224,6 +227,10 @@ p {
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         font-weight: 900;
+                    }
+                    button {
+                        border: none;
+                        background-color: white;
                     }
                 }
             }
