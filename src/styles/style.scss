@@ -6,10 +6,12 @@
     --font-family-Shrikhand: "Shrikhand", sans-serif;
     --margin--container: 1.5%;
     --color-primaire: #9356dc;
+    --color-primaire-test: 147, 86, 220;
     --color-secondaire: #ff79da;
     --color-tertiaire: #99e2d0;
     --color-gray: gray;
     --color-bg-gray-darkness: #6d6d6d;
+    --color-bg-gray-darkness-hard: #353535;
     --color-bg-gray: #eaeaea;
     --color-bg-light: #f6f6f6;
     --color-bg-light-pink: #f5edff;
@@ -35,6 +37,9 @@ p {
 .bg-gray-drakness {
     background-color: var(--color-bg-gray-darkness);
 }
+.bg-gray-drakness-hard {
+    background-color: var(--color-bg-gray-darkness-hard);
+}
 .bg-light {
     background-color: var(--color-bg-light);
 }
@@ -52,7 +57,9 @@ p {
     padding: 0.5rem;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    align-items: center;
     h1 {
         margin: 0;
         font-size: 1.5rem;
@@ -91,13 +98,14 @@ p {
         button {
             margin: 1rem;
             margin-bottom: 2rem;
-            padding: 1em;
+            padding: 1em 1.5em;
             border-radius: 30px;
             color: white;
             background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
             border: none;
             cursor: pointer;
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            font-weight: 500;
             &:hover {
                 opacity: 0.8;
                 background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
@@ -105,21 +113,25 @@ p {
             }
         }
     }
- 
+
     .fonctionality {
         h2 {
             font-size: 1.5rem;
             text-align: start;
         }
-     
+
         .fonctionality--block {
             display: flex;
             align-items: center;
             margin: 2rem 0;
             border-radius: 20px;
             margin-left: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
             &:hover {
                 background-color: var(--color-bg-light-pink);
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
                 & a i {
                     color: var(--color-primaire);
                 }
@@ -141,6 +153,7 @@ p {
                 span {
                     color: white;
                     font-size: 0.75rem;
+                    font-weight: 500;
                 }
             }
             .fonctionality--block--description {
@@ -156,7 +169,6 @@ p {
                 font-size: 1.2rem;
                 color: var(--color-bg-gray-darkness);
             }
-         
         }
         .fonctionality--block--active {
             background-color: var(--color-bg-light-pink);
@@ -186,7 +198,10 @@ p {
             background-color: white;
             margin: 1rem 0;
             border-radius: 15px;
-
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            &:hover {
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            }
             .image {
                 height: 200px;
                 img {
@@ -214,7 +229,6 @@ p {
                 }
                 div:nth-child(2) {
                     i {
-                        position: relative;
                         font-family: "Font Awesome 5 Free";
                         font-weight: 100;
                         cursor: pointer;
@@ -227,6 +241,9 @@ p {
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         font-weight: 900;
+                        -webkit-animation-duration: 2s;
+                        animation-duration: 2s;
+                        animation-name: slideHeart;
                     }
                     button {
                         border: none;
@@ -236,4 +253,122 @@ p {
             }
         }
     }
+}
+// Animation heart
+@keyframes slideHeart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes slideHeart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes makeItfadeIn {
+    100% {
+        background-position: left;
+    }
+}
+// animation fad in top
+.fad-in-top {
+    animation: fadeIn 0.75s ease-in both;
+    opacity: 0;
+    -webkit-animation: fadeIn 0.75s ease-in both;
+}
+.animatin-delay-0 {
+    animation-delay: 0s;
+}
+.animatin-delay-025 {
+    animation-delay: 0.25s;
+}
+.animatin-delay-05 {
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -10%, 0);
+		-webkit-transform: translate3d(0, -10%, 0);
+		-moz-transform: translate3d(0, -10%, 0);
+		-ms-transform: translate3d(0, -10%, 0);
+		-o-transform: translate3d(0, -10%, 0);
+}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+// FOOTER
+footer {
+    h2 {
+        text-align: start;
+        color: white;
+        font-family: var(--font-family-Shrikhand);
+        font-weight: 500;
+    }
+    .link {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 1rem;
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1rem;
+            margin: 0.25rem 0;
+            i {
+                width: 30px;
+            }
+        }
+    }
+}
+// LOADING SPINNER
+.section {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    font-size: 4rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: white;
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 1rem;
+    position: relative;
+}
+.loader-quart {
+    border-radius: 50px;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+}
+.loader-quart::after {
+    content:'';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-radius: 50px;
+    border: 6px solid transparent;
+    border-top-color: white;
+    animation: spin 1s linear 0s ;
+    -webkit-animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); }
+    to {transform: rotate(360deg);}
 }

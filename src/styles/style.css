@@ -7,10 +7,12 @@
   --font-family-Shrikhand: "Shrikhand", sans-serif;
   --margin--container: 1.5%;
   --color-primaire: #9356dc;
+  --color-primaire-test: 147, 86, 220;
   --color-secondaire: #ff79da;
   --color-tertiaire: #99e2d0;
   --color-gray: gray;
   --color-bg-gray-darkness: #6d6d6d;
+  --color-bg-gray-darkness-hard: #353535;
   --color-bg-gray: #eaeaea;
   --color-bg-light: #f6f6f6;
   --color-bg-light-pink: #f5edff;
@@ -42,6 +44,10 @@ p {
   background-color: var(--color-bg-gray-darkness);
 }
 
+.bg-gray-drakness-hard {
+  background-color: var(--color-bg-gray-darkness-hard);
+}
+
 .bg-light {
   background-color: var(--color-bg-light);
 }
@@ -63,8 +69,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav h1 {
@@ -128,7 +138,7 @@ p {
 .container--block .exploreRestaurant button {
   margin: 1rem;
   margin-bottom: 2rem;
-  padding: 1em;
+  padding: 1em 1.5em;
   border-radius: 30px;
   color: white;
   background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
@@ -136,6 +146,7 @@ p {
   cursor: pointer;
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
 }
 
 .container--block .exploreRestaurant button:hover {
@@ -160,10 +171,15 @@ p {
   margin: 2rem 0;
   border-radius: 20px;
   margin-left: 10px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .container--block .fonctionality .fonctionality--block:hover {
   background-color: var(--color-bg-light-pink);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .container--block .fonctionality .fonctionality--block:hover a i {
@@ -196,6 +212,7 @@ p {
 .container--block .fonctionality .fonctionality--block .fonctionality--block--icon span {
   color: white;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .container--block .fonctionality .fonctionality--block .fonctionality--block--description {
@@ -253,6 +270,13 @@ p {
   background-color: white;
   margin: 1rem 0;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container--block .list-dishes .list-dishes--block:hover {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .container--block .list-dishes .list-dishes--block .image {
@@ -295,7 +319,6 @@ p {
 }
 
 .container--block .list-dishes .list-dishes--block .description div:nth-child(2) i {
-  position: relative;
   font-family: "Font Awesome 5 Free";
   font-weight: 100;
   cursor: pointer;
@@ -309,6 +332,10 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: slideHeart;
+          animation-name: slideHeart;
 }
 
 .container--block .list-dishes .list-dishes--block .description div:nth-child(2) button {
@@ -316,7 +343,191 @@ p {
   background-color: white;
 }
 
-footer {
-  height: 100px;
+@keyframes slideHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes makeItfadeIn {
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes makeItfadeIn {
+  100% {
+    background-position: left;
+  }
+}
+
+.fad-in-top {
+  animation: fadeIn 0.75s ease-in both;
+  opacity: 0;
+  -webkit-animation: fadeIn 0.75s ease-in both;
+}
+
+.animatin-delay-0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.animatin-delay-025 {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.animatin-delay-05 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+    -webkit-transform: translate3d(0, -10%, 0);
+    -moz-transform: translate3d(0, -10%, 0);
+    -ms-transform: translate3d(0, -10%, 0);
+    -o-transform: translate3d(0, -10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+    -webkit-transform: translate3d(0, -10%, 0);
+    -moz-transform: translate3d(0, -10%, 0);
+    -ms-transform: translate3d(0, -10%, 0);
+    -o-transform: translate3d(0, -10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+footer h2 {
+  text-align: start;
+  color: white;
+  font-family: var(--font-family-Shrikhand);
+  font-weight: 500;
+}
+
+footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+footer .link a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+footer .link a i {
+  width: 30px;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  font-size: 4rem;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: white;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
+}
+
+.loader-quart {
+  border-radius: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+}
+
+.loader-quart::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: white;
+  animation: spin 1s linear 0s;
+  -webkit-animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
