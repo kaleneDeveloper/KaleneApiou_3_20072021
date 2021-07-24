@@ -566,15 +566,15 @@ footer .link a i {
   .section p {
     display: block;
   }
-  .container--block .list-dishes .list-dishes--block {
-    margin: 0;
-  }
   .container--block .list-dishes .list-dishes--block .image {
     height: 300px;
   }
 }
 
 @media screen and (min-width: 992px) {
+  .container--block .list-dishes .list-dishes--block {
+    margin: 0;
+  }
   .margin-bottom-2 {
     margin-bottom: 2rem;
   }
