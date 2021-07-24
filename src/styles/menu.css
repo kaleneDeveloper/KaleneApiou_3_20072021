@@ -27,6 +27,7 @@ section {
 
 .container--block {
   border-radius: 40px 40px 0 0;
+  padding: 2rem;
 }
 
 .container--block .title {
@@ -191,12 +192,6 @@ section {
   font-size: 1.5rem;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-}
-
-footer .container .container--block {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 footer .container .container--block {

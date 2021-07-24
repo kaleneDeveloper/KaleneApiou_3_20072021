@@ -459,15 +459,12 @@ footer {
         justify-content: center;
         align-items: center;
         .container--block {
-            width: 100%;
-            align-items: center;
-            padding: 1rem 0;
+            width: 1150px;
+            margin: 0 auto;
+            // padding: 1rem 1rem;
         }
         .fonctionality {
             justify-content: flex-start;
-        }
-        .width-1200 {
-            width: 1200px;
         }
         .fonctionality div:nth-child(2) {
             margin-left: 0;
@@ -480,7 +477,6 @@ footer {
         .container {
             .container--block {
                 align-items: flex-start;
-                width: 1200px;
             }
         }
     }

@@ -630,19 +630,13 @@ footer .link a i {
             align-items: center;
   }
   .container .container--block {
-    width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 1rem 0;
+    width: 1150px;
+    margin: 0 auto;
   }
   .container .fonctionality {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-  .container .width-1200 {
-    width: 1200px;
   }
   .container .fonctionality div:nth-child(2) {
     margin-left: 0;
@@ -654,7 +648,6 @@ footer .link a i {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 1200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

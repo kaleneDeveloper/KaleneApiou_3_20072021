@@ -22,7 +22,7 @@ section {
 }
 .container--block {
     border-radius: 40px 40px 0 0;
-
+    padding: 2rem;
     .title {
         display: flex;
         justify-content: space-between;
@@ -128,7 +128,6 @@ section {
 
 footer .container .container--block {
     align-items: flex-start;
-    width: 1200px;
 }
 // Check heart
 .heart-check {
