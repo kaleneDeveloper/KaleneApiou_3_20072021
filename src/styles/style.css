@@ -437,6 +437,7 @@ footer .container .container--block {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 1200px;
 }
 
 footer h2 {
