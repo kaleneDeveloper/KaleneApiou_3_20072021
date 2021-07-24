@@ -436,9 +436,31 @@ footer {
     .section p {
         display: block;
     }
-
     .container--block {
+        .fonctionality {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 2rem;
+            justify-content: center;
+            .title {
+                flex-basis: 100%;
+            }
+            .fonctionality--block {
+                margin: 0 1rem;
+                .fonctionality--block--description {
+                    padding: 1rem 2rem 1rem 0rem;
+                }
+            }
+        }
         .list-dishes {
+            display: grid;
+            row-gap: 2rem;
+            column-gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            justify-content: space-around;
+            .title {
+                grid-column: 1/3;
+            }
             .list-dishes--block .image {
                 height: 300px;
             }
@@ -469,17 +491,8 @@ footer {
             }
         }
         .list-dishes {
-            display: grid;
-            row-gap: 2rem;
-            column-gap: 2rem;
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
             justify-content: space-around;
-            .title {
-                grid-column: 1/3;
-            }
-            .list-dishes--block .image {
-                height: 300px;
-            }
         }
     }
 }
