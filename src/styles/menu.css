@@ -27,7 +27,6 @@ section {
 
 .container--block {
   border-radius: 40px 40px 0 0;
-  padding: 2rem;
 }
 
 .container--block .title {
@@ -264,7 +263,6 @@ footer .container .container--block {
        object-fit: cover;
   }
   .container--block--menu {
-    width: 100%;
     display: -ms-grid;
     display: grid;
     -webkit-column-gap: 2rem;

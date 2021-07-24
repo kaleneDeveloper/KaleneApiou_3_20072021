@@ -469,9 +469,9 @@ footer {
         justify-content: center;
         align-items: center;
         .container--block {
-            width: 1150px;
+            width: calc(1200px - 4rem);
             margin: 0 auto;
-            // padding: 1rem 1rem;
+            padding: 1rem 2rem;
         }
         .fonctionality {
             justify-content: flex-start;

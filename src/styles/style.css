@@ -642,8 +642,9 @@ footer .link a i {
             align-items: center;
   }
   .container .container--block {
-    width: 1150px;
+    width: calc(1200px - 4rem);
     margin: 0 auto;
+    padding: 1rem 2rem;
   }
   .container .fonctionality {
     -webkit-box-pack: start;
