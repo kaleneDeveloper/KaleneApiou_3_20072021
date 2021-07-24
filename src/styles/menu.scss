@@ -1,0 +1,187 @@
+@import url(style.css);
+
+.header-image {
+        max-height: 40vh;
+        width: 100%;
+        object-fit: cover;
+}
+section {
+    margin-top: -4rem;
+}
+.nav {
+    position: relative;
+    a {
+        position: absolute;
+        left: 0;
+        margin-left: 5%;
+        i {
+            font-size: 2rem;
+            color: var(--color-bg-gray-darkness-hard);
+        }
+    }
+}
+.container--block {
+    border-radius: 40px 40px 0 0;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+            font-family: var(--font-family-Shrikhand);
+            font-size: 1.5rem;
+        }
+        i {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 100;
+        }
+        button {
+            background-color: var(--color-bg-light);
+            border: 0;
+        }
+    }
+    .menu {
+        text-align: start;
+        .menu--title h2 {
+            font-weight: 400;
+            border-bottom: 3px solid var(--color-tertiaire);
+            padding-bottom: 0.25rem;
+            width: 2.5rem;
+        }
+    }
+}
+// Check starter
+.menu--block {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 15px;
+    background-color: var(--color-tertiaire);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    &:hover .description {
+        border-radius: 15px 0 0 15px;
+        animation: wobble 0.5s ease-in-out alternate;
+    }
+    .description {
+        background-color: white;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 15px;
+        animation: wobble-reverse 0.5s ease-in-out alternate;
+        h3 {
+            margin: 0;
+        }
+        span {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            p {
+                margin: 0;
+                margin-top: 0.5rem;
+            }
+            p:nth-child(2) {
+                font-weight: 500;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 15px 15px 0;
+        width: 0%;
+        transition: width 0.5s, height 0.5s, transform 0.5s;
+        i {
+            font-size: 0rem;
+            color: white;
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+    & input[type="checkbox"] {
+        appearance: none;
+        margin: 0px;
+    }
+    & input[type="checkbox"]:checked ~ .description {
+        border-radius: 15px 0 0 15px;
+        animation: wobble 0.5s ease-in-out alternate;
+    }
+    & input[type="checkbox"]:checked ~ .check,
+    & input[type="checkbox"]:hover ~ .check {
+        display: flex;
+        width: 80px;
+        max-width: 80px;
+        i {
+            font-size: 1.5rem;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+footer .container .container--block {
+    align-items: flex-start;
+}
+// Check heart
+.heart-check {
+    margin-right: 5%;
+}
+// footer
+
+// Animation border
+@keyframes wobble {
+    0% {
+        border-radius: 15px;
+    }
+    100% {
+        border-radius: 15px 0 0 15px;
+    }
+}
+@keyframes wobble-reverse {
+    0% {
+        border-radius: 15px 0 0 15px;
+    }
+    100% {
+        border-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-image {
+        max-height: 50vh;
+        width: 100%;
+        object-fit: cover;
+}
+    .container--block--menu {
+        width: 100%;
+        display: grid;
+        column-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        justify-content: space-around;
+        margin-bottom: 4rem;
+    }
+    .button-order {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        #order {
+            margin: 0;
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1200px) {
+    .container--block--menu {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        justify-content: space-around;
+    }
+}

@@ -60,6 +60,31 @@ p {
   font-family: var(--font-family-Shrikhand);
 }
 
+button {
+  padding: 1em 1.5em;
+  border-radius: 30px;
+  color: white;
+  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.8;
+  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#order {
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
 .nav {
   position: relative;
   padding: 0.5rem;
@@ -138,22 +163,6 @@ p {
 .container--block .exploreRestaurant button {
   margin: 1rem;
   margin-bottom: 2rem;
-  padding: 1em 1.5em;
-  border-radius: 30px;
-  color: white;
-  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
-  border: none;
-  cursor: pointer;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  font-weight: 500;
-}
-
-.container--block .exploreRestaurant button:hover {
-  opacity: 0.8;
-  background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container--block .fonctionality h2 {
@@ -318,36 +327,52 @@ p {
   cursor: pointer;
 }
 
-.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 100;
+.heart-check {
+  margin-right: 5%;
+  position: relative;
   cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--color-bg-gray-darkness);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i:hover,
-.container--block .list-dishes .list-dishes--block .description div:nth-child(2) i:focus {
+.heart-check input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.heart-check input[type="checkbox"]:checked ~ .fas,
+.heart-check input[type="checkbox"]:hover ~ .fas {
   background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-name: slideHeart;
           animation-name: slideHeart;
 }
 
-.container--block .list-dishes .list-dishes--block .description div:nth-child(2) button {
-  border: none;
-  background-color: white;
+.heart-check .fas {
+  font-size: 1.7rem;
+  font-weight: 100;
+  color: var(--color-bg-gray-darkness);
 }
 
 @keyframes slideHeart {
   from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
     opacity: 0;
   }
   to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
   }
 }
@@ -358,18 +383,6 @@ p {
   }
   to {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes makeItfadeIn {
-  100% {
-    background-position: left;
-  }
-}
-
-@keyframes makeItfadeIn {
-  100% {
-    background-position: left;
   }
 }
 
@@ -397,11 +410,8 @@ p {
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, -10%, 0);
     -webkit-transform: translate3d(0, -10%, 0);
-    -moz-transform: translate3d(0, -10%, 0);
-    -ms-transform: translate3d(0, -10%, 0);
-    -o-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0);
   }
   to {
     opacity: 1;
@@ -413,17 +423,24 @@ p {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, -10%, 0);
     -webkit-transform: translate3d(0, -10%, 0);
-    -moz-transform: translate3d(0, -10%, 0);
-    -ms-transform: translate3d(0, -10%, 0);
-    -o-transform: translate3d(0, -10%, 0);
+            transform: translate3d(0, -10%, 0);
   }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+}
+
+footer .container .container--block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .container .container--block > * {
+  padding-left: 1rem;
 }
 
 footer h2 {
@@ -457,9 +474,16 @@ footer .link a i {
   width: 30px;
 }
 
+@-webkit-keyframes timeout {
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 .section {
   background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
+  position: fixed;
   font-size: 4rem;
   width: 100%;
   height: 100vh;
@@ -474,9 +498,16 @@ footer .link a i {
           align-items: center;
   font-weight: 500;
   color: white;
+  z-index: 100;
+  -webkit-animation: timeout;
+          animation: timeout;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
-.loader {
+.section .loader {
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -484,13 +515,13 @@ footer .link a i {
   position: relative;
 }
 
-.loader-quart {
+.section .loader-quart {
   border-radius: 50px;
   border: 6px solid rgba(255, 255, 255, 0.4);
 }
 
-.loader-quart::after {
-  content: '';
+.section .loader-quart::after {
+  content: "";
   position: absolute;
   top: -6px;
   left: -6px;
@@ -499,8 +530,8 @@ footer .link a i {
   border-radius: 50px;
   border: 6px solid transparent;
   border-top-color: white;
-  animation: spin 1s linear 0s;
   -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -528,6 +559,90 @@ footer .link a i {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container--block .list-dishes .list-dishes--block .image {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .margin-bottom-2 {
+    margin-bottom: 2rem;
+  }
+  .container--block .fonctionality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container--block .fonctionality .title {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .container--block .fonctionality .fonctionality--block {
+    margin: 0 1rem;
+  }
+  .container--block .fonctionality .fonctionality--block .fonctionality--block--description {
+    padding: 1rem 2rem 1rem 0rem;
+  }
+  .container--block .list-dishes {
+    display: -ms-grid;
+    display: grid;
+    row-gap: 2rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container--block .list-dishes .title {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  .container--block .list-dishes .list-dishes--block .image {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .container--block {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+  }
+  .container .fonctionality {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container .width-1200 {
+    width: 1200px;
+  }
+  .container .fonctionality div:nth-child(2) {
+    margin-left: 0;
+  }
+  .container .fonctionality div:last-child {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

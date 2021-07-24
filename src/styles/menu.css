@@ -1,0 +1,291 @@
+@import url(style.css);
+.header-image {
+  max-height: 40vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section {
+  margin-top: -4rem;
+}
+
+.nav {
+  position: relative;
+}
+
+.nav a {
+  position: absolute;
+  left: 0;
+  margin-left: 5%;
+}
+
+.nav a i {
+  font-size: 2rem;
+  color: var(--color-bg-gray-darkness-hard);
+}
+
+.container--block {
+  border-radius: 40px 40px 0 0;
+}
+
+.container--block .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container--block .title h1 {
+  font-family: var(--font-family-Shrikhand);
+  font-size: 1.5rem;
+}
+
+.container--block .title i {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 100;
+}
+
+.container--block .title button {
+  background-color: var(--color-bg-light);
+  border: 0;
+}
+
+.container--block .menu {
+  text-align: start;
+}
+
+.container--block .menu .menu--title h2 {
+  font-weight: 400;
+  border-bottom: 3px solid var(--color-tertiaire);
+  padding-bottom: 0.25rem;
+  width: 2.5rem;
+}
+
+.menu--block {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  border-radius: 15px;
+  background-color: var(--color-tertiaire);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu--block:hover {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu--block:hover .description {
+  border-radius: 15px 0 0 15px;
+  -webkit-animation: wobble 0.5s ease-in-out alternate;
+          animation: wobble 0.5s ease-in-out alternate;
+}
+
+.menu--block .description {
+  background-color: white;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-animation: wobble-reverse 0.5s ease-in-out alternate;
+          animation: wobble-reverse 0.5s ease-in-out alternate;
+}
+
+.menu--block .description h3 {
+  margin: 0;
+}
+
+.menu--block .description span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.menu--block .description span p {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.menu--block .description span p:nth-child(2) {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.menu--block .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 15px 15px 0;
+  width: 0%;
+  -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+  transition: width 0.5s, height 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.menu--block .check i {
+  font-size: 0rem;
+  color: white;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.menu--block input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0px;
+}
+
+.menu--block input[type="checkbox"]:checked ~ .description {
+  border-radius: 15px 0 0 15px;
+  -webkit-animation: wobble 0.5s ease-in-out alternate;
+          animation: wobble 0.5s ease-in-out alternate;
+}
+
+.menu--block input[type="checkbox"]:checked ~ .check,
+.menu--block input[type="checkbox"]:hover ~ .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  max-width: 80px;
+}
+
+.menu--block input[type="checkbox"]:checked ~ .check i,
+.menu--block input[type="checkbox"]:hover ~ .check i {
+  font-size: 1.5rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+footer .container .container--block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .container .container--block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.heart-check {
+  margin-right: 5%;
+}
+
+@-webkit-keyframes wobble {
+  0% {
+    border-radius: 15px;
+  }
+  100% {
+    border-radius: 15px 0 0 15px;
+  }
+}
+
+@keyframes wobble {
+  0% {
+    border-radius: 15px;
+  }
+  100% {
+    border-radius: 15px 0 0 15px;
+  }
+}
+
+@-webkit-keyframes wobble-reverse {
+  0% {
+    border-radius: 15px 0 0 15px;
+  }
+  100% {
+    border-radius: 15px;
+  }
+}
+
+@keyframes wobble-reverse {
+  0% {
+    border-radius: 15px 0 0 15px;
+  }
+  100% {
+    border-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-image {
+    max-height: 50vh;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .container--block--menu {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 4rem;
+  }
+  .button-order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .button-order #order {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container--block--menu {
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/*# sourceMappingURL=menu.css.map */
