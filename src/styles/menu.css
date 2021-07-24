@@ -29,6 +29,12 @@ section {
   border-radius: 40px 40px 0 0;
 }
 
+.container--block .container--block--menu {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1rem;
+}
+
 .container--block .title {
   display: -webkit-box;
   display: -ms-flexbox;
