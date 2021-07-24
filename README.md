@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://github.com/kaleneDeveloper/KaleneApiou_3_20072021">
-    <img src="images/logo/ohmyfood.pmg" alt="Logo">
+    <img src="src/images/logo/ohmyfood@2x.svg" alt="Logo">
   </a>
 
   <p align="center">
