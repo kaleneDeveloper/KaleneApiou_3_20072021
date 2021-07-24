@@ -233,7 +233,6 @@ button {
                         cursor: pointer;
                     }
                 }
-                
             }
         }
     }
@@ -245,12 +244,11 @@ button {
     cursor: pointer;
     display: flex;
     align-items: center;
-    & input[type="checkbox"] {
+    input[type="checkbox"] {
         appearance: none;
         margin: 0;
     }
-    & input[type="checkbox"]:checked ~ .fas,
-    & input[type="checkbox"]:hover ~ .fas {
+    input[type="checkbox"]:checked ~ .fas {
         background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -258,6 +256,17 @@ button {
         -webkit-animation-duration: 0.5s;
         animation-duration: 0.5s;
         animation-name: slideHeart;
+    }
+    @media (hover: hover) {
+        input[type="checkbox"]:hover ~ .fas {
+            background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            animation-name: slideHeart;
+        }
     }
     .fas {
         font-size: 1.7rem;
@@ -403,11 +412,12 @@ footer {
     }
 }
 // responsive
+
 @media screen and (min-width: 768px) {
     .section p {
         display: block;
     }
-   
+
     .container--block {
         .list-dishes {
             .list-dishes--block .image {

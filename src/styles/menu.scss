@@ -1,9 +1,9 @@
 @import url(style.css);
 
 .header-image {
-        max-height: 40vh;
-        width: 100%;
-        object-fit: cover;
+    max-height: 40vh;
+    width: 100%;
+    object-fit: cover;
 }
 section {
     margin-top: -4rem;
@@ -61,12 +61,10 @@ section {
     border-radius: 15px;
     background-color: var(--color-tertiaire);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    &:hover {
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    }
-    &:hover .description {
-        border-radius: 15px 0 0 15px;
-        animation: wobble 0.5s ease-in-out alternate;
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
     }
     .description {
         background-color: white;
@@ -97,7 +95,6 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0 15px 15px 0;
         width: 0%;
         transition: width 0.5s, height 0.5s, transform 0.5s;
         i {
@@ -106,22 +103,38 @@ section {
             transition: transform 0.5s ease-in-out;
         }
     }
-    & input[type="checkbox"] {
+    input[type="checkbox"] {
         appearance: none;
         margin: 0px;
     }
-    & input[type="checkbox"]:checked ~ .description {
+    input[type="checkbox"]:checked ~ .description {
         border-radius: 15px 0 0 15px;
         animation: wobble 0.5s ease-in-out alternate;
     }
-    & input[type="checkbox"]:checked ~ .check,
-    & input[type="checkbox"]:hover ~ .check {
+    @media (hover: hover) {
+        & input[type="checkbox"]:hover ~ .description {
+            border-radius: 15px 0 0 15px;
+            animation: wobble 0.5s ease-in-out alternate;
+        }
+    }
+    input[type="checkbox"]:checked ~ .check {
         display: flex;
         width: 80px;
         max-width: 80px;
         i {
             font-size: 1.5rem;
             transform: rotate(360deg);
+        }
+    }
+    @media (hover: hover) {
+        input[type="checkbox"]:hover ~ .check {
+            display: flex;
+            width: 80px;
+            max-width: 80px;
+            i {
+                font-size: 1.5rem;
+                transform: rotate(360deg);
+            }
         }
     }
 }
@@ -158,7 +171,7 @@ footer .container .container--block {
         max-height: 50vh;
         width: 100%;
         object-fit: cover;
-}
+    }
     .container--block--menu {
         width: 100%;
         display: grid;

@@ -87,15 +87,11 @@ section {
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.menu--block:hover {
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.menu--block:hover .description {
-  border-radius: 15px 0 0 15px;
-  -webkit-animation: wobble 0.5s ease-in-out alternate;
-          animation: wobble 0.5s ease-in-out alternate;
+@media (hover: hover) {
+  .menu--block:hover {
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .menu--block .description {
@@ -148,7 +144,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 0 15px 15px 0;
   width: 0%;
   -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
   transition: width 0.5s, height 0.5s, -webkit-transform 0.5s;
@@ -178,8 +173,15 @@ section {
           animation: wobble 0.5s ease-in-out alternate;
 }
 
-.menu--block input[type="checkbox"]:checked ~ .check,
-.menu--block input[type="checkbox"]:hover ~ .check {
+@media (hover: hover) {
+  .menu--block input[type="checkbox"]:hover ~ .description {
+    border-radius: 15px 0 0 15px;
+    -webkit-animation: wobble 0.5s ease-in-out alternate;
+            animation: wobble 0.5s ease-in-out alternate;
+  }
+}
+
+.menu--block input[type="checkbox"]:checked ~ .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,11 +189,25 @@ section {
   max-width: 80px;
 }
 
-.menu--block input[type="checkbox"]:checked ~ .check i,
-.menu--block input[type="checkbox"]:hover ~ .check i {
+.menu--block input[type="checkbox"]:checked ~ .check i {
   font-size: 1.5rem;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media (hover: hover) {
+  .menu--block input[type="checkbox"]:hover ~ .check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80px;
+    max-width: 80px;
+  }
+  .menu--block input[type="checkbox"]:hover ~ .check i {
+    font-size: 1.5rem;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 footer .container .container--block {

@@ -346,8 +346,7 @@ button:hover {
   margin: 0;
 }
 
-.heart-check input[type="checkbox"]:checked ~ .fas,
-.heart-check input[type="checkbox"]:hover ~ .fas {
+.heart-check input[type="checkbox"]:checked ~ .fas {
   background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -356,6 +355,19 @@ button:hover {
   animation-duration: 0.5s;
   -webkit-animation-name: slideHeart;
           animation-name: slideHeart;
+}
+
+@media (hover: hover) {
+  .heart-check input[type="checkbox"]:hover ~ .fas {
+    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-name: slideHeart;
+            animation-name: slideHeart;
+  }
 }
 
 .heart-check .fas {
