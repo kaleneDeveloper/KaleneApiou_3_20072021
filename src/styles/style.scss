@@ -461,6 +461,9 @@ footer {
             .title {
                 grid-column: 1/3;
             }
+            .list-dishes--block {
+                margin: 0;
+            }
             .list-dishes--block .image {
                 height: 300px;
             }
