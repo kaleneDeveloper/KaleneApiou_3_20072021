@@ -267,8 +267,8 @@ footer .container .container--block {
     display: grid;
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
-    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-bottom: 4rem;
@@ -286,6 +286,13 @@ footer .container .container--block {
   }
   .button-order #order {
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container--block--menu {
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 
