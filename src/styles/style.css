@@ -437,7 +437,6 @@ footer .container .container--block {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 1200px;
 }
 
 footer h2 {
@@ -650,6 +649,12 @@ footer .link a i {
   }
   .container .fonctionality div:last-child {
     margin-right: 0;
+  }
+  footer .container .container--block {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 1200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

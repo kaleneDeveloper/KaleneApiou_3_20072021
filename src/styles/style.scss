@@ -316,7 +316,6 @@ footer {
     .container {
         .container--block {
             align-items: flex-start;
-            width: 1200px;
         }
     }
     h2 {
@@ -475,6 +474,14 @@ footer {
         }
         .fonctionality div:last-child {
             margin-right: 0;
+        }
+    }
+    footer {
+        .container {
+            .container--block {
+                align-items: flex-start;
+                width: 1200px;
+            }
         }
     }
 }
