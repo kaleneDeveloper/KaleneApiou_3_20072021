@@ -439,10 +439,6 @@ footer .container .container--block {
           align-items: flex-start;
 }
 
-footer .container .container--block > * {
-  padding-left: 1rem;
-}
-
 footer h2 {
   text-align: start;
   color: white;
@@ -563,6 +559,9 @@ footer .link a i {
 }
 
 @media screen and (min-width: 768px) {
+  .container--block .list-dishes .list-dishes--block {
+    margin: 0;
+  }
   .container--block .list-dishes .list-dishes--block .image {
     height: 300px;
   }
