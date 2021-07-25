@@ -208,10 +208,12 @@ section {
     display: -ms-flexbox;
     display: flex;
     width: 60px;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
     margin-left: 0;
   }
   .menu--block input[type="checkbox"]:hover ~ .check i {
-    visibility: hidden;
+    visibility: visible;
     font-size: 1.5rem;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
