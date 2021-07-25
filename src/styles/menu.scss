@@ -123,7 +123,7 @@ section {
     }
     input[type="checkbox"]:checked ~ .check {
         display: flex;
-        width: 80px;
+        width: 60px;
         max-width: 80px;
         i {
             font-size: 1.5rem;
@@ -133,8 +133,8 @@ section {
     @media (hover: hover) {
         input[type="checkbox"]:hover ~ .check {
             display: flex;
-            width: 80px;
-            max-width: 80px;
+            width: 60px;
+            max-width: 60px;
             i {
                 font-size: 1.5rem;
                 transform: rotate(360deg);
