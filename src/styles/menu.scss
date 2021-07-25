@@ -99,10 +99,12 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 0%;
-        transition: width 0.5s, height 0.5s, transform 0.5s;
+        width: 60px;
+        transition-duration: 0.5s;
+        margin-left: -60px;
         i {
-            font-size: 0rem;
+            visibility: hidden;
+            font-size: 1.5rem;
             color: white;
             transition: transform 0.5s ease-in-out;
         }
@@ -124,8 +126,10 @@ section {
     input[type="checkbox"]:checked ~ .check {
         display: flex;
         width: 60px;
-        max-width: 80px;
+        transition-duration: 0.5s;
+        margin-left: 0;
         i {
+            visibility: visible;
             font-size: 1.5rem;
             transform: rotate(360deg);
         }
@@ -134,8 +138,9 @@ section {
         input[type="checkbox"]:hover ~ .check {
             display: flex;
             width: 60px;
-            max-width: 60px;
+            margin-left: 0;
             i {
+                visibility: hidden;
                 font-size: 1.5rem;
                 transform: rotate(360deg);
             }
@@ -149,12 +154,12 @@ section {
         h3 {
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space:nowrap
+            white-space: nowrap;
         }
         p:nth-child(1) {
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space:nowrap
+            white-space: nowrap;
         }
     }
 }
