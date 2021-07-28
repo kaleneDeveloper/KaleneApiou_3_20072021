@@ -22,10 +22,13 @@ section {
 }
 .container--block {
     border-radius: 40px 40px 0 0;
-    // padding: 2rem;
     .container--block--menu {
         display: grid;
         row-gap: 1rem;
+        column-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        justify-content: space-around;
+        margin-bottom: 4rem;
     }
     .title {
         display: flex;
@@ -71,7 +74,6 @@ section {
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
         }
     }
-
 
     .description {
         background-color: white;
@@ -204,13 +206,6 @@ footer .container .container--block {
         width: 100%;
         object-fit: cover;
     }
-    .container--block--menu {
-        display: grid;
-        column-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        justify-content: space-around;
-        margin-bottom: 4rem;
-    }
     .button-order {
         display: flex;
         justify-content: center;
@@ -218,17 +213,5 @@ footer .container .container--block {
         #order {
             margin: 0;
         }
-    }
-}
-@media screen and (min-width: 992px) {
-    .container--block--menu {
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .container--block--menu {
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        justify-content: space-around;
     }
 }

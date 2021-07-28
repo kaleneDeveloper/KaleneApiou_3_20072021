@@ -3,7 +3,7 @@
   max-height: 40vh;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 section {
@@ -33,6 +33,10 @@ section {
   display: -ms-grid;
   display: grid;
   row-gap: 1rem;
+  column-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: space-around;
+  margin-bottom: 4rem;
 }
 
 .container--block .title {
@@ -40,11 +44,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container--block .title h2 {
@@ -80,22 +84,22 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: 1rem 0;
   border-radius: 15px;
   background-color: var(--color-tertiaire);
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (hover: hover) {
   .menu--block:hover {
     -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -107,11 +111,11 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   border-radius: 15px;
   -webkit-animation: wobble-reverse 0.5s ease-in-out alternate;
-          animation: wobble-reverse 0.5s ease-in-out alternate;
+  animation: wobble-reverse 0.5s ease-in-out alternate;
 }
 
 .menu--block .description h3 {
@@ -123,8 +127,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -143,14 +147,14 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 60px;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   margin-left: -60px;
 }
 
@@ -169,8 +173,8 @@ section {
   height: 100%;
   position: absolute;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin: 0px;
   cursor: pointer;
 }
@@ -178,14 +182,14 @@ section {
 .menu--block input[type="checkbox"]:checked ~ .description {
   border-radius: 15px 0 0 15px;
   -webkit-animation: wobble 0.5s ease-in-out alternate;
-          animation: wobble 0.5s ease-in-out alternate;
+  animation: wobble 0.5s ease-in-out alternate;
 }
 
 @media (hover: hover) {
   .menu--block input[type="checkbox"]:hover ~ label {
     border-radius: 15px 0 0 15px;
     -webkit-animation: wobble 0.5s ease-in-out alternate;
-            animation: wobble 0.5s ease-in-out alternate;
+    animation: wobble 0.5s ease-in-out alternate;
   }
 }
 
@@ -195,7 +199,7 @@ section {
   display: flex;
   width: 60px;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   margin-left: 0;
 }
 
@@ -203,7 +207,7 @@ section {
   visibility: visible;
   font-size: 1.5rem;
   -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 @media (hover: hover) {
@@ -213,21 +217,21 @@ section {
     display: flex;
     width: 60px;
     -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    transition-duration: 0.5s;
     margin-left: 0;
   }
   .menu--block input[type="checkbox"]:hover ~ .check i {
     visibility: visible;
     font-size: 1.5rem;
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 .menu--block .description {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   width: 0px;
 }
 
@@ -245,8 +249,8 @@ section {
 
 footer .container .container--block {
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .heart-check {
@@ -294,48 +298,21 @@ footer .container .container--block {
     max-height: 50vh;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .container--block--menu {
-    display: -ms-grid;
-    display: grid;
-    -webkit-column-gap: 2rem;
-            column-gap: 2rem;
-    -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-bottom: 4rem;
+    object-fit: cover;
   }
   .button-order {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
   .button-order #order {
     margin: 0;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .container--block--menu {
-    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container--block--menu {
-    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
 /*# sourceMappingURL=menu.css.map */
