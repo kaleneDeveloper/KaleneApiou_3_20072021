@@ -47,7 +47,7 @@ section {
           align-items: center;
 }
 
-.container--block .title h1 {
+.container--block .title h2 {
   font-family: var(--font-family-Shrikhand);
   font-size: 1.5rem;
 }
@@ -118,7 +118,7 @@ section {
   margin: 0;
 }
 
-.menu--block .description span {
+.menu--block .description div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,12 +128,12 @@ section {
   width: 100%;
 }
 
-.menu--block .description span p {
+.menu--block .description div p {
   margin: 0;
   margin-top: 0.5rem;
 }
 
-.menu--block .description span p:nth-child(2) {
+.menu--block .description div p:nth-child(2) {
   font-weight: 500;
   margin-right: 0.5rem;
 }
@@ -165,10 +165,14 @@ section {
 }
 
 .menu--block input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   margin: 0px;
+  cursor: pointer;
 }
 
 .menu--block input[type="checkbox"]:checked ~ .description {
@@ -178,7 +182,7 @@ section {
 }
 
 @media (hover: hover) {
-  .menu--block input[type="checkbox"]:hover ~ .description {
+  .menu--block input[type="checkbox"]:hover ~ label {
     border-radius: 15px 0 0 15px;
     -webkit-animation: wobble 0.5s ease-in-out alternate;
             animation: wobble 0.5s ease-in-out alternate;
