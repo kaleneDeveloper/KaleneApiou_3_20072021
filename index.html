@@ -11,17 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,900&family=Shrikhand&display=swap"
-        rel="stylesheet">
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/4c8ada3b58.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="src/styles/style.css">
     <title>Ohmyfood</title>
 </head>
+
 <body>
     <div class="section">
         <span class="loader loader-quart"></span>
@@ -29,7 +26,7 @@
             Chargement ...
         </p>
     </div>
-    
+
     <header>
         <div class="nav">
             <h1>Ohmyfood</h1>
@@ -49,9 +46,11 @@
                 <div class="exploreRestaurant">
                     <h2>Réservez le menu qui <br> vous convient</h2>
                     <p>Découvrez des restaurants d'exception,<br> séléctionnés par nos soins.</p>
-                    <a href="#restaurant">
-                        <button>Explorer nos restaurants</button>
-                    </a>
+                    <div class="button-container">
+                        <a class="button" href="#restaurant">
+                            Explorer nos restaurants
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -65,19 +64,19 @@
                         <div class="fonctionality--block--icon">
                             <span>1</span>
                         </div>
-                            <a class="fonctionality--block--description" href="#">
-                                <i class="fas fa-mobile-alt"></i>
-                                <h2>Choisissez un restaurant</h2>
-                            </a>
+                        <a class="fonctionality--block--description" href="#">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h2>Choisissez un restaurant</h2>
+                        </a>
                     </div>
                     <div class="fonctionality--block bg-light fad-in-top animatin-delay-025">
                         <div class="fonctionality--block--icon">
                             <span>2</span>
                         </div>
-                            <a class="fonctionality--block--description" href="#">
-                                <i class="fas fa-list-ul"></i>
-                                <h2>Composez votre menu</h2>
-                            </a>
+                        <a class="fonctionality--block--description" href="#">
+                            <i class="fas fa-list-ul"></i>
+                            <h2>Composez votre menu</h2>
+                        </a>
                     </div>
                     <div class="fonctionality--block bg-light fad-in-top animatin-delay-05">
                         <div class="fonctionality--block--icon">
@@ -145,7 +144,7 @@
                                 </a>
                             </div>
                             <label class="heart-check">
-                                <input type="checkbox" id="like" name="like">
+                                <input type="checkbox" name="like">
                                 <i class="fas fa-heart"></i>
                             </label>
                         </div>
@@ -167,29 +166,29 @@
                                 </a>
                             </div>
                             <label class="heart-check">
-                                <input type="checkbox" id="like" name="like">
+                                <input type="checkbox" name="like">
                                 <i class="fas fa-heart"></i>
                             </label>
                         </div>
                     </div>
                     <div class="list-dishes--block">
                         <div class="image">
-                            <a href="Menu -le-delice-des-sens.html">
+                            <a href="Menu-le-delice-des-sens.html">
                                 <img src="src/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="louis-hansel-shotsoflouis-qNBGVyOCY8Q">
+                                    alt="louis-hansel-shotsoflouis-qNBGVyOCY8Q">
                             </a>
                         </div>
                         <div class="description">
                             <div>
-                                <a href="Menu -le-delice-des-sens.html">
+                                <a href="Menu-le-delice-des-sens.html">
                                     <h3>Le délice des sens</h3>
                                 </a>
-                                <a href="Menu -le-delice-des-sens.html">
+                                <a href="Menu-le-delice-des-sens.html">
                                     <p>Folie-Méricourt</p>
                                 </a>
                             </div>
                             <label class="heart-check">
-                                <input type="checkbox" id="like" name="like">
+                                <input type="checkbox" name="like">
                                 <i class="fas fa-heart"></i>
                             </label>
                         </div>
@@ -212,4 +211,5 @@
         </div>
     </footer>
 </body>
+
 </html>
