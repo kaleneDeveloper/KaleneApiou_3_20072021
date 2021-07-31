@@ -127,7 +127,7 @@ section {
         animation: wobble 0.5s ease-in-out alternate;
     }
     @media (hover: hover) {
-        & input[type="checkbox"]:hover ~ label {
+        & input[type="checkbox"]:hover ~ .description {
             border-radius: 15px 0 0 15px;
             animation: wobble 0.5s ease-in-out alternate;
         }
