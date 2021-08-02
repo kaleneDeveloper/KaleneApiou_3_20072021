@@ -26,7 +26,7 @@ section {
         display: grid;
         row-gap: 1rem;
         column-gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, 100%);
         justify-content: space-around;
         margin-bottom: 4rem;
     }
@@ -201,6 +201,11 @@ footer .container .container--block {
 }
 
 @media screen and (min-width: 768px) {
+    .container--block { 
+        .container--block--menu {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+    }
     .header-image {
         max-height: 50vh;
         width: 100%;
@@ -215,3 +220,20 @@ footer .container .container--block {
         }
     }
 }
+@media screen and (max-width: 768px) {
+ 
+    .header-image {
+        max-height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .button-order {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        #order {
+            margin: 0;
+        }
+    }
+}
+
