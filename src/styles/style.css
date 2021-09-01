@@ -60,7 +60,8 @@ p {
   font-family: var(--font-family-Shrikhand);
 }
 
-.button, button {
+.button,
+button {
   padding: 1em 1.5em;
   border-radius: 30px;
   color: white;
@@ -71,9 +72,13 @@ p {
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   font-weight: 500;
   text-decoration: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  opacity: 1;
 }
 
-.button:hover, button:hover {
+.button:hover,
+button:hover {
   opacity: 0.8;
   background: -webkit-linear-gradient(var(--color-secondaire), var(--color-primaire));
   -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
@@ -374,10 +379,10 @@ p {
 }
 
 .heart-check input[type="checkbox"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
 .heart-check input[type="checkbox"]:checked ~ .fas {
@@ -385,23 +390,10 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
   -webkit-animation-name: slideHeart;
           animation-name: slideHeart;
-}
-
-@media (hover: hover) {
-  .heart-check input[type="checkbox"]:hover ~ .fas {
-    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
-    -webkit-animation-name: slideHeart;
-            animation-name: slideHeart;
-  }
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
 }
 
 .heart-check .fas {
@@ -426,9 +418,13 @@ p {
 @-webkit-keyframes slideHeart {
   from {
     opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
   to {
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

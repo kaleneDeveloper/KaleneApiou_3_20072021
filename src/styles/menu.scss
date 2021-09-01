@@ -119,6 +119,8 @@ section {
         height: 100%;
         position: absolute;
         appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         margin: 0px;
         cursor: pointer;
     }
@@ -201,7 +203,7 @@ footer .container .container--block {
 }
 
 @media screen and (min-width: 768px) {
-    .container--block { 
+    .container--block {
         .container--block--menu {
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         }
@@ -221,7 +223,6 @@ footer .container .container--block {
     }
 }
 @media screen and (max-width: 768px) {
- 
     .header-image {
         max-height: 50vh;
         width: 100%;
@@ -236,4 +237,3 @@ footer .container .container--block {
         }
     }
 }
-
