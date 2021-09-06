@@ -15,12 +15,17 @@ section {
 }
 
 .nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav a:nth-child(1) {
   position: absolute;
   left: 0;
   margin-left: 5%;
 }
 
-.nav a i {
+.nav a:nth-child(1) i {
   font-size: 2rem;
   color: var(--color-bg-gray-darkness-hard);
 }

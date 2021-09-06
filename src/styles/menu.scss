@@ -11,6 +11,10 @@ section {
 .nav {
     position: relative;
     a {
+        text-decoration: none;
+        color: black;
+    }
+    a:nth-child(1) {
         position: absolute;
         left: 0;
         margin-left: 5%;
