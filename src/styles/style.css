@@ -114,6 +114,11 @@ button:hover {
   font-family: var(--font-family-Shrikhand);
 }
 
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
 .container {
   width: 100%;
   display: -webkit-box;
