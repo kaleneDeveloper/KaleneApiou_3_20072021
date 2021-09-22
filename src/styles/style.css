@@ -168,6 +168,35 @@ button:hover {
   color: var(--color-bg-gray-darkness);
 }
 
+.container--block .location input {
+  border: none;
+  background-color: #EAEAEA;
+}
+
+.container--block .location input:focus {
+  outline: none;
+}
+
+.container--block .location input::-webkit-input-placeholder {
+  color: var(--color-bg-gray-darkness);
+  font-weight: 500;
+}
+
+.container--block .location input:-ms-input-placeholder {
+  color: var(--color-bg-gray-darkness);
+  font-weight: 500;
+}
+
+.container--block .location input::-ms-input-placeholder {
+  color: var(--color-bg-gray-darkness);
+  font-weight: 500;
+}
+
+.container--block .location input::placeholder {
+  color: var(--color-bg-gray-darkness);
+  font-weight: 500;
+}
+
 .container--block .exploreRestaurant h2 {
   font-size: 1.5rem;
 }
