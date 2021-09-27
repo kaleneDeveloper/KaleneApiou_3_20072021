@@ -120,7 +120,7 @@ button {
         }
         input {
             border: none;
-            background-color: #EAEAEA;
+            background-color: #eaeaea;
         }
         input:focus {
             outline: none;
@@ -290,10 +290,11 @@ button {
     display: flex;
     align-items: center;
     input[type="checkbox"] {
-        appearance: none;
         margin: 0;
+        appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
+        opacity: 0;
     }
     input[type="checkbox"]:checked ~ .fas {
         background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
