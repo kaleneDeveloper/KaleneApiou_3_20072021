@@ -21,7 +21,7 @@
 
 ## À propos
 
-Le site Reservia est un projet produit par Nicolas pour la formation de développeur web à OpenClassrooms.
+Le site Reservia est un projet produit par Kalene APIOU pour la formation de développeur web à OpenClassrooms.
 
 Contenance du site :
 * Création et modification d'annonces d'hébergements à Marseille,
